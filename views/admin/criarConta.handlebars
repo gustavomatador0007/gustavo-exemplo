@@ -1,0 +1,17 @@
+<h1>Crie sua conta agora mesmo!</h1>
+
+{{#each erros}}
+    <div><h3>{{text}}</h3></div>
+{{else}}
+{{/each}}
+
+<form action="sendProfile" method="post">
+    Nome: <input type="text" name="nome" id="nome">
+    Email: <input type="email" name="email" id="email">
+    Senha: <input type="password" name="senha" id="">
+    Confirmar senha: <input type="password" name="senha2" id="">
+    <input type="submit" name="enviarConta" id="">
+</form>
+
+<a href="/">Ir para o inicio</a> <br>
+<a href="/login">Já possui uma conta? Faça login</a>

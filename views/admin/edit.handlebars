@@ -1,0 +1,10 @@
+<h1>Editar</h1>
+
+<form action="/categorias/edit" method="post">
+    Novo nome da linguagem<input type="text" name="language" id="" placeholder="Linguagem" value="{{categoria.Linguagem}}"> <br>
+    <br>
+    Nova Descrição: <input type="text" name="description" id="" placeholder="Descrição" value="{{categoria.Desc}}"> <br>
+    <br>
+    <input type="submit" name="enviar-categoria" id="">
+    <input type="hidden" name="id" id="" value="{{categoria._id}}">
+</form>

@@ -1,0 +1,15 @@
+<h1>Listagens de registros:</h1>
+
+{{#each categorias}}
+    Linguagem: {{Linguagem}} <br>
+    Descrição: {{Desc}} <br>
+    <a href="/edit/{{_id}}">Editar</a> <br>
+    <form action="deletar" method="post">
+        <input type="hidden" name="id" id="" value="{{_id}}">
+        <button type="submit">Deletar categoria</button>
+    </form>
+    <br>
+
+{{else}}
+<h4>Não há nenhum registro por enquanto!</h4>
+{{/each}}

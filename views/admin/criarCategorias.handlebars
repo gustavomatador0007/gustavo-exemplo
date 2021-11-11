@@ -1,0 +1,14 @@
+{{#each erros}}
+    <div>{{text}}</div>
+{{else}}
+{{/each}}
+
+<h1>Criar Categorias</h1>
+
+<form action="newCategory" method="post">
+    Nome da Linguagem: <input type="text" name="language" id="" placeholder="Linguagem"> <br>
+    <br>
+    Descrição: <input type="text" name="description" id="" placeholder="Descrição"> <br>
+    <br>
+    <input type="submit" name="enviar-categoria" id="">
+</form>
