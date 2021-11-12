@@ -94,12 +94,10 @@
         res.render("admin/login")
     })
 
-    server.post("/loginPage",(req,res, next)=>{
-        passport.authenticate("local",{
+    server.post("/loginPage", passport.authenticate("local",{
             successRedirect:"/",
             failureRedirect:"login"
-        })
-    })
+        }))
     
 
 // CADASTRO DE USUARIOS
@@ -122,7 +120,7 @@
             erros.push({text:"a senha é muito fraca!"})
         }
 
-        if(req.body.senha =! req.body.senha2){
+        if(req.body.senha != req.body.senha2){
             erros.push({text:"As senhas não são iguais"})
         }
 
